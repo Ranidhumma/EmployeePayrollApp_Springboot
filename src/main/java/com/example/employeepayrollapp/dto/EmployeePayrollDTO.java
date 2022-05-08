@@ -8,7 +8,6 @@ public Long Salary;
         this.name = name;
         this.Salary = salary;
     }
-
     @Override
     public String toString() {
         return "name="+name+":salary="+Salary;
