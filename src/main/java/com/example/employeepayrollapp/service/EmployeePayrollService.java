@@ -4,7 +4,6 @@ import com.example.employeepayrollapp.model.EmployeePayrollData;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
-
 @Service
 public class EmployeePayrollService implements IEmployeePayrollService {
     private List<EmployeePayrollData> employeePayrollList = new ArrayList();
@@ -28,12 +27,12 @@ public class EmployeePayrollService implements IEmployeePayrollService {
         EmployeePayrollData empData = this.getEmployeePayrollDataById(empId);
         empData.setName(empPayrollDTO.name);
         empData.setSalary(empPayrollDTO.Salary);
-        employeePayrollList.set(empId - 1, empData);
+        employeePayrollList.set(empId-1, empData);
         return empData;
     }
 
     public void deleteEmployeePayrollData(int empId) {
-        employeePayrollList.remove(empId - 1);
+        employeePayrollList.remove(empId-1);
 
     }
 }
