@@ -14,7 +14,7 @@ public class EmployeePayrollData {
     public EmployeePayrollData() {
     }
 
-    public Long getSalary() {
+   public Long getSalary() {
         return Salary;
     }
 
