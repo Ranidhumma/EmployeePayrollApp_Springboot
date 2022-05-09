@@ -1,5 +1,4 @@
 package com.example.employeepayrollapp.dto;
-
 import lombok.Data;
 
 public @Data class ResponseDTO {
