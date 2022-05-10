@@ -1,42 +1,34 @@
 package com.example.employeepayrollapp.model;
 import com.example.employeepayrollapp.dto.EmployeePayrollDTO;
+import lombok.Data;
+import java.time.LocalDate;
+import java.util.List;
 
-public class EmployeePayrollData {
-    private  Long Salary;
-    private  String name;
+public @Data class EmployeePayrollData {
     private int employeeID;
+    private String name;
+    private Long salary;
+    public String gender;
+    public LocalDate startDate;
+    public String note;
+    public String profilePic;
+    private  List<String> department;
 
     public EmployeePayrollData(int empId, EmployeePayrollDTO employeePayrollDTO) {
         this.employeeID = empId;
-        this.name = employeePayrollDTO.name ;
-        this.Salary= employeePayrollDTO.Salary;
-    }
-    public EmployeePayrollData() {
-    }
+        this.name = employeePayrollDTO.name;
+        this.salary = employeePayrollDTO.salary;
+        this.gender = employeePayrollDTO.gender;
+        this.startDate = employeePayrollDTO.startDate;
+        this.note=employeePayrollDTO.note;
+        this.profilePic=employeePayrollDTO.profilePic;
+        this.department=employeePayrollDTO.department;
 
-   public Long getSalary() {
-        return Salary;
-    }
-
-    public void setSalary(Long salary) {
-        Salary = salary;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getEmployeeID() {
-        return employeeID;
-    }
-
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
     }
 }
+
+
+
+
 
 

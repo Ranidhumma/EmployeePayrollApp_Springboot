@@ -1,5 +1,4 @@
 package com.example.employeepayrollapp.service;
-
 import com.example.employeepayrollapp.dto.EmployeePayrollDTO;
 import com.example.employeepayrollapp.exception.EmployeePayrollException;
 import com.example.employeepayrollapp.model.EmployeePayrollData;
@@ -33,7 +32,7 @@ public class EmployeePayrollService implements IEmployeePayrollService {
     public EmployeePayrollData updateEmployeePayrollData(int empId, EmployeePayrollDTO empPayrollDTO) {
         EmployeePayrollData empData = this.getEmployeePayrollDataById(empId);
         empData.setName(empPayrollDTO.name);
-        empData.setSalary(empPayrollDTO.Salary);
+        empData.setSalary(empPayrollDTO.salary);
         employeePayrollList.set(empId - 1, empData);
         return empData;
     }
