@@ -27,6 +27,13 @@ public @Data class EmployeePayrollData {
     private  List<String> department;
 
     public EmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
+        this.updateEmployeePayrollData(employeePayrollDTO);
+    }
+
+    public EmployeePayrollData() {
+
+    }
+    public void updateEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
         this.name = employeePayrollDTO.name;
         this.salary = employeePayrollDTO.salary;
         this.gender = employeePayrollDTO.gender;
@@ -35,9 +42,6 @@ public @Data class EmployeePayrollData {
         this.profilePic=employeePayrollDTO.profilePic;
         this.department=employeePayrollDTO.department;
 
-    }
-
-    public EmployeePayrollData() {
     }
 }
 
