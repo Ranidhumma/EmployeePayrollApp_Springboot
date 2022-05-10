@@ -7,6 +7,7 @@ import java.util.List;
 public interface IEmployeePayrollService {
 
     List<EmployeePayrollData> getEmployeePayrollData();
+    List<EmployeePayrollData> getEmployeesByDepartment(String department);
 
     EmployeePayrollData getEmployeePayrollDataById(int empId);
 
